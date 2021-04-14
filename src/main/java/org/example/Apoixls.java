@@ -31,6 +31,7 @@ public class Apoixls {
 
             NodeList listOfBooks = doc.getElementsByTagName("film");
 
+
             for (int s = 0; s < listOfBooks.getLength(); s++) {
                 Node nNode = listOfBooks.item(s);
                 if (nNode.getNodeType() == Node.ELEMENT_NODE) {
