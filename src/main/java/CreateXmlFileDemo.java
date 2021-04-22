@@ -18,58 +18,55 @@ class XMLCreate {
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             Document doc = dBuilder.newDocument();
 
-            // books (root) element
+      
             Element films = doc.createElement("films");
             doc.appendChild(films);
 
-            // genre1 element
+       
             Element Category = doc.createElement("Category");
             films.appendChild(Category);
 
-            // setting genreID attribute to element genre1
+         
             Attr idCategory = doc.createAttribute("idCategory");
             idCategory.setValue("001");
             Category.setAttributeNode(idCategory);
 
-            // setting genreName attribute to element genre1
+     
             Attr Categoryname = doc.createAttribute("Categoryname");
             Categoryname.setValue("history");
             Category.setAttributeNode(Categoryname);
 
-            // book1 element
+        
             Element film1 = doc.createElement("film");
             Category.appendChild(film1);
 
-            // setting bookId attribute to element book
+       
             Attr filmid = doc.createAttribute("filmid");
             filmid.setValue("0001");
             film1.setAttributeNode(filmid);
 
-            // author element
+   
             Element Regizor = doc.createElement("Regizor");
             Regizor.appendChild(doc.createTextNode("Simon Stone"));
             film1.appendChild(Regizor);
 
-            // book name element
             Element Name = doc.createElement("Name");
             Name.appendChild(doc.createTextNode("The Dig"));
             film1.appendChild(Name);
 
-            // publication date element
+
             Element Publication = doc.createElement("Publication");
             Publication.appendChild(doc.createTextNode("2222"));
             film1.appendChild(Publication);
 
-            // availability element
             Element availability = doc.createElement("availability");
             availability.appendChild(doc.createTextNode("true"));
             film1.appendChild(availability);
 
-            // characters list element
+          
             Element Casts = doc.createElement("Casts");
             film1.appendChild(Casts);
 
-            // character elements
             Element Cast1 = doc.createElement("Cast");
             Cast1.appendChild(doc.createTextNode("Lily James"));
             Casts.appendChild(Cast1);
@@ -98,26 +95,25 @@ class XMLCreate {
             Regizor2.appendChild(doc.createTextNode("Thomas Kail"));
             film2.appendChild(Regizor2);
 
-            // book name element
+        
             Element Name2 = doc.createElement("Name");
             Name2.appendChild(doc.createTextNode("Hamilton"));
             film2.appendChild(Name2);
 
-            // publication date element
+       
             Element Publication2 = doc.createElement("Publication");
             Publication2.appendChild(doc.createTextNode("2020"));
             film2.appendChild(Publication2);
 
-            // availability element
             Element availability2 = doc.createElement("availability");
             availability2.appendChild(doc.createTextNode("true"));
             film2.appendChild(availability2);
 
-            // characters list element
+       
             Element Casts2 = doc.createElement("Casts");
             film2.appendChild(Casts2);
 
-            // character elements
+          
             Element Cast12 = doc.createElement("Cast");
             Cast12.appendChild(doc.createTextNode("Brego"));
             Casts2.appendChild(Cast12);
